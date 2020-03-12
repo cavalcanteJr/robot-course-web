@@ -3,6 +3,7 @@ pipeline {
        docker{
            image "qaninja/pyrobot2"
        }
+   }
    stages {
       stage('Setup') {
          steps {
@@ -20,15 +21,14 @@ pipeline {
           }
       }
       stage("UAT"){
-          step{
+          steps{
               input (message: "Go to production?", ok: "Partiu")
               echo "simulando a subida em produção!!!"
           }
       }
       stage("Prod"){
-          stage{
+          steps{
               echo "produção ok"
           }
       }
-   }
 }
