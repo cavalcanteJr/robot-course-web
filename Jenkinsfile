@@ -31,4 +31,5 @@ pipeline {
               echo "produção ok"
           }
       }
+   }
 }
