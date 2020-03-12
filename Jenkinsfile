@@ -1,7 +1,7 @@
 pipeline {
    agent {
        docker{
-           image "python:3.5.1"
+           image "qaninja/pyrobot2"
        }
    stages {
       stage('Setup') {
