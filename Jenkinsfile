@@ -21,7 +21,7 @@ pipeline {
       }
       stage("UAT"){
           step{
-              input (message: "Go to production?". ok: "Partiu")
+              input (message: "Go to production?", ok: "Partiu")
               echo "simulando a subida em produção!!!"
           }
       }
